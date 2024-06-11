@@ -91,4 +91,6 @@ def predict_top_words(text, num_predictions=5):
             word_list.append(predicted_word)
         top_words.append(word_list)
 
+    print("LSTM", top_words)
+
     return top_words
