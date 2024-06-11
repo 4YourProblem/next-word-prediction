@@ -33,6 +33,7 @@ jQuery(document).ready(function () {
         .done(function (jsondata, textStatus, jqXHR) {
           console.log(jsondata);
           $('#text_ngram').val(jsondata['ngram']);
+          $('#text_lstm').val(jsondata['lstm']);
         })
         .fail(function (jsondata, textStatus, jqXHR) {
           console.log(jsondata);

@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
-
+ 
 
 @app.route("/get_end_predictions", methods=["post"])
 def get_prediction_eos():
