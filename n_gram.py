@@ -18,10 +18,10 @@ def predict_next_word(prefix, ngram_order=3):
     # Preprocess the words (convert to lowercase, remove punctuation)
     words = [word.lower() for word in words if word.isalnum()]
 
-    # Define the order of the N-gram model (N=3 for trigrams)
-    N = 6
-
     # Create N-grams from the tokenized words
+    # Length: N-Grams(k) = k - (n - 1)
+    #                 k is number of words in sentence
+    #                 n os ngram_order
     ngrams_list = list(ngrams(words, ngram_order))
 
     # Create a defaultdict to store N-grams and their frequency
